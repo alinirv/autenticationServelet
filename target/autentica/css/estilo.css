@@ -1,0 +1,98 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(100, 126, 108);
+}
+
+#formulario{
+    margin: auto;
+    padding: 30px;
+    background-color: rgb(133, 169, 235);
+    width: 500px;
+    box-shadow: black 0.5em 0.5em 0.3em;
+    border-style: solid;
+    border-color: #4039a1;
+    border-width: 10px;
+}
+
+body.div.container{
+    text-align: center;
+    display: inline-block;
+    text-align: left;
+}
+
+#barra-menu{
+    width: 100%;
+    background-color: cornflowerblue;
+    display: inline-block;
+}
+
+input, label{
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+    border-style: solid;
+    border-color: #cbcbcb;
+    border-width: 10px;
+    margin-block: inherit;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    background-color: #a3d9b0;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(48, 230, 118);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+button{
+    display: flex;
+    margin:0 auto;
+    align-items:center;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: rgb(54, 172, 30);
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 12px 8px;
+    transition-duration: 0.8s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button2{
+    background-color: #21ff00; 
+    color: black; 
+    border: 5px solid #b7c9ab;
+}
