@@ -1,0 +1,48 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="br.ifsp.pw3.model.dao.UsuarioDao" %>
+<%@ page import="br.ifsp.pw3.model.domain.Usuario" %>
+<%
+    String idParam = request.getParameter("id");
+    if (idParam == null || idParam.isEmpty()) {
+        response.sendRedirect("usuarios.jsp");
+        return;
+    }
+
+    int id = Integer.parseInt(idParam);
+
+    UsuarioDao usuarioDao = new UsuarioDao();
+    Usuario usuario = usuarioDao.getUsuario(id);
+
+    if (usuario == null) {
+        response.sendRedirect("usuarios.jsp");
+        return;
+    }
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Editar Usuário</title>
+</head>
+<body>
+    <h1>Alterar dados</h1>
+    <form action="editar" id="formulario" method="post">
+        <input type="hidden" name="id" value="<%= usuario.getId() %>">
+      
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" name="usuario" value="<%= usuario.getUsuario() %>" required><br>
+      
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" value="<%= usuario.getSenha() %>" required><br>
+      
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="<%= usuario.getNome() %>" required><br>
+      
+        <input class="submit" type="submit" value="Salvar">
+    </form>
+      
+</body>
+</html>

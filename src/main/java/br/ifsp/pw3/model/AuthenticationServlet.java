@@ -26,7 +26,7 @@ public class AuthenticationServlet extends HttpServlet {
 
         if (autenticado) {
             
-            resp.sendRedirect("listaUsuario.jsp");
+            resp.sendRedirect("gerenciamento.jsp");
         } else {
             
             resp.sendRedirect("erro.jsp");

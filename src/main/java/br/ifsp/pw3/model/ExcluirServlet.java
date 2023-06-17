@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.ifsp.pw3.model.dao.UsuarioDao;
 
-@WebServlet(name = "excluirUsuario", value = "/excluirUsuario")
+@WebServlet(name = "excluir", value = "/excluir")
 public class ExcluirServlet extends HttpServlet {
 
     @Override

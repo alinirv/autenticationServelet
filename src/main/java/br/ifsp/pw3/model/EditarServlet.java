@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import br.ifsp.pw3.model.dao.UsuarioDao;
 import br.ifsp.pw3.model.domain.Usuario;
 
-@WebServlet(name = "editarUsuario", value = "/editarUsuario")
+@WebServlet(name = "editar", value = "/editar")
 public class EditarServlet extends HttpServlet {
 
     @Override
